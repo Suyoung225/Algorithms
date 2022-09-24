@@ -1,0 +1,167 @@
+## Coding Test Practice 2021 Dev-Matching: 웹 백엔드 개발자(상반기) - 로또의 최고 순위와 최저 순위
+
+- Description <br>
+Lotto 6/45(Hereinafter 'Lotto') is a popular lottery game where six numbers are drawn from a pool of 45 numbers. The lottery prize tiers are as follows1:
+
+- Prize Tiers	Requirement  <br>
+1	All six numbers match  <br>
+2	Five numbers match  <br>
+3	Four numbers match  <br>
+4	Three numbers match  <br>
+5	Two numbers match  <br>
+6 (no prize)	All other cases  <br>
+You bought a lotto ticket and have been waiting for the draw. However, your little brother drew scribbles all over your ticket so that you can't make out some of its numbers. After the draw, you wanted to figure out the highest prize you could have won as well as the lowest prize you could have got.
+Suppose that your ticket contained the following set of numbers: 44, 1, 0, 0, 31 25, where 0s represent the numbers on your ticket that you can't make out. If the six winning lottery numbers are 31, 10, 45, 1, 6, and 19, then the following shows the highest and the lowest prize you could have won.
+ <br>
+The order in which the numbers are drawn is irrelevant. <br>
+Had the numbers you can't make out been 10 and 6, you could have won the 3rd prize. <br>
+There are other possibilities where you could have won the 3rd prize. However, you would not have won a prize higher than the 3rd one. <br>
+Had the numbers you can't make out been 11 and 7, you could have won the 5th prize. <br>
+There are other possibilities where you could have won the 5th prize. However, you would not have won any prize (Tier 6). <br>
+Suppose parameters lottos and win_nums are given, where lottos is an array containing the numbers on your ticket and win_nums an array containing the winning numbers. Please write a function solution that returns the highest prize tier and the lowest prize tier that you could have won.
+ <br>
+ 
+- Constraints  <br>
+lottos is an integer array whose length is 6.  <br>
+The elements of lottos are integers between 0 and 45.  <br>
+0 represents the number you can't make out.  <br>
+Other than 0s, no integers in lottos overlap.  <br>
+The elements of lottos may not be arranged in a certain order. <br>
+win_nums is an integer array whose length is 6.  <br>
+The elements of win_nums are integers between 1 and 45.  <br>
+No integers in win_nums will overlap.  <br>
+The elements of win_nums may not be arranged in a certain order.  <br>
+
+- Examples  <br>
+
+|lottos|	win_nums|	result | 
+|:---:|:---:|:---:|
+|44, 1, 0, 0, 31, 25]	|31, 10, 45, 1, 6, 19]|[3, 5]| 
+|0, 0, 0, 0, 0, 0]|[38, 19, 20, 40, 15, 25]	|1, 6]|
+|45, 4, 35, 20, 3, 9]|20, 9, 3, 45, 4, 35]	|[, 1]|
+
+- Example #1 <br>
+Demonstrated in the prompt above. <br>
+
+- Example #2 <br>
+Had the numbers you can't make out been as follows, you could have won the 1st prize or no prize (Tier 6): <br>
+
+Winning numbers	38	19	20	40	15	25	Result <br>
+Highest prize	0→38	0→19	0→20	0→40	0→15	0→25	6 numbers match, wins the 1st prize <br>
+Lowest prize	0→21	0→22	0→23	0→24	0→26	0→27	0 numbers match, wins no prize (Tier 6) <br>
+
+- Example #3 <br>
+Since all the numbers on your ticket match, both the highest prize and the lowest prize you could win are the 1st prize. <br>
+
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] lottos, int[] win_nums) {
+        List<Integer> list = new ArrayList<>(lottos.length);
+        for(int w : win_nums) {
+            list.add(w);
+        }
+
+        int cnt = 0; int zero = 0;
+        for(int lot : lottos){
+            if(list.contains(lot)) cnt++;
+            if(lot==0) zero++;
+        }
+        System.out.println(cnt+","+ zero);
+        if(cnt == 0) {
+            if (zero == 0) return new int[]{6, 6};
+            return new int[]{7 - cnt - zero, 6};
+        }
+        return new int[]{7 - cnt - zero, 7 - cnt};
+
+    }
+}
+```
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] lottos, int[] win_nums) {
+        int[] rank = {6, 6, 5, 4, 3, 2, 1};
+        int answer = 0;
+        int hidden = 0;
+
+        Arrays.sort(win_nums);
+        for (int i = 0; i < lottos.length; i++)
+            if (Arrays.binarySearch(win_nums, lottos[i]) > -1)
+                answer++;
+            else if (lottos[i] == 0)
+                hidden++;
+
+        return new int[] {rank[answer + hidden], rank[answer]};
+    }
+}
+```
+
+```java
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+import java.util.HashMap;
+import java.util.Map;
+
+class Solution {
+    public int[] solution(int[] lottos, int[] win_nums) {
+        Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
+        int zeroCount = 0;
+
+        for(int lotto : lottos) {
+            if(lotto == 0) {
+                zeroCount++;
+                continue;
+            }
+            map.put(lotto, true);
+        }
+
+
+        int sameCount = 0;
+        for(int winNum : win_nums) {
+            if(map.containsKey(winNum)) sameCount++;
+        }
+
+        int maxRank = 7 - (sameCount + zeroCount);
+        int minRank = 7 - sameCount;
+        if(maxRank > 6) maxRank = 6;
+        if(minRank > 6) minRank = 6;
+
+        return new int[] {maxRank, minRank};
+    }
+}
+```
+
