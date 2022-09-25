@@ -1,1 +1,1 @@
-# JavaPrac
+# Practicing Data Structures & Algorithms
