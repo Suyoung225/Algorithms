@@ -49,3 +49,8 @@ class Solution {
 }
 ```
 13점
+
+```java
+// num: 중복되는 숫자
+cntX = X.length() - X.replaceAll(num, "").length();
+```
