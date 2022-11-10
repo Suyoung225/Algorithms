@@ -22,3 +22,6 @@
 ```java
 new StringBuilder(a).reverse().toString()
 ```
+
+### 탐욕법
+[큰 수 만들기](https://github.com/Suyoung225/JavaPrac/blob/main/programmers/lv.2%20%ED%81%B0%20%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
