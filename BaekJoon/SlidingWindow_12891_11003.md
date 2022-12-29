@@ -80,8 +80,6 @@ Di = Ai-L+1 ~ Ai 중의 최솟값이라고 할 때, D에 저장된 수를 출력
 첫째 줄에 Di를 공백으로 구분하여 순서대로 출력한다.
 
 ```java
-import org.w3c.dom.Node;
-
 import java.io.*;
 import java.util.*;
 
