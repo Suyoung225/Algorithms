@@ -29,19 +29,20 @@ public class Main {
         }
 
         Stack<Integer> stack = new Stack<>();
-        int start = 0;
+        int start = 0; 
         for (int i = 0; i < N; i++) {
             if(arr[i] > start){
                 for (int j = start + 1; j < arr[i] + 1; j++) {
                     stack.push(j);
                     sb.append("+").append("\n");
                 }
-                start = arr[i];
-            }else if(stack.peek() != arr[i]) {
+                start = arr[i]; // 오름차순으로 push해야 하기 때문에 마지막으로 push한 값 기록
+            }else if(stack.peek() != arr[i]) { 
                 System.out.println("NO");
                 return;
             }
-            stack.pop();
+            // if문 안 for문으로 arr[i]가 스택의 top 값과 같은 경우
+            stack.pop(); 
             sb.append("-").append("\n");
         }
         System.out.println(sb);
@@ -52,3 +53,60 @@ public class Main {
 ```
 
 ***
+### 오큰수
+https://www.acmicpc.net/problem/17298
+
+#### 문제
+크기가 N인 수열 A = A1, A2, ..., AN이 있다. 수열의 각 원소 Ai에 대해서 오큰수 NGE(i)를 구하려고 한다. Ai의 오큰수는 오른쪽에 있으면서 Ai보다 큰 수 중에서 가장 왼쪽에 있는 수를 의미한다. 그러한 수가 없는 경우에 오큰수는 -1이다.
+
+예를 들어, A = [3, 5, 2, 7]인 경우 NGE(1) = 5, NGE(2) = 7, NGE(3) = 7, NGE(4) = -1이다. A = [9, 5, 4, 8]인 경우에는 NGE(1) = -1, NGE(2) = 8, NGE(3) = 8, NGE(4) = -1이다.
+
+#### 입력 
+4 <br>
+3 5 2 7 <br>
+#### 출력
+5 7 7 -1
+
+#### 아이디어
+스택에 배열의 값이 아닌 인덱스를 저장!!!
+
+```java
+import java.io.*;
+import java.util.Stack;
+import java.util.StringTokenizer;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        int[] ans = new int[N];
+        Stack<Integer> stack = new Stack<>(); // 인덱스 저장
+        stack.push(0);
+        for (int i = 0; i < N; i++) {
+            while(!stack.isEmpty() && arr[stack.peek()] < arr[i]){
+                ans[stack.pop()] = arr[i];
+            }
+            stack.push(i);
+        }
+        while(!stack.isEmpty()){
+            ans[stack.pop()] = -1;
+        }
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        for (int i = 0; i < N; i++) {
+            bw.write(ans[i]+" ");
+        }
+        bw.flush();
+        bw.close();
+    }
+
+}
+
+```
