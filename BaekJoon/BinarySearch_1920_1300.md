@@ -33,6 +33,7 @@ public class Main {
             binary(sc.nextInt());
         }
     }
+    
     static void binary(int target){
         int start = 0;
         int end = arr.length - 1;
@@ -67,6 +68,9 @@ https://www.acmicpc.net/problem/1300
 
 #### 출력
 B[k]를 출력한다.
+
+#### 아이디어
+- A의 i행은 총 N열로 되어 있고 i의 배수의 값이 순서대로 들어있기 때문에, 중앙값보다 작거나 같은 수의 개수를 구할 때, for문으로 각 행에서 Math.min(중앙값/i, N)을 구하면 된다.
 
 ```java
 import java.util.Arrays;
