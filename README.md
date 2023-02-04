@@ -15,3 +15,8 @@
 [lv.3 합승 택시 요금](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.3/2021KAKAO_%ED%95%A9%EC%8A%B9%20%ED%83%9D%EC%8B%9C%20%EC%9A%94%EA%B8%88.md) : 플로이드-워셜(최단 거리) <br>
 [lv.2 순위 검색](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.2/2021KAKAO_%EC%88%9C%EC%9C%84%20%EA%B2%80%EC%83%89.md) : 조합, 정렬, 이분 탐색 <br>
 [lv.3 광고 삽입](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.3/2021KAKAO_%EA%B4%91%EA%B3%A0%20%EC%82%BD%EC%9E%85.md) : 투 포인터, String.format <br>
+
+### 2022 KAKAO BLIND RECRUITMENT
+[lv.1 신고 결과 받기](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.1/2022KAKAO_%EC%8B%A0%EA%B3%A0%20%EA%B2%B0%EA%B3%BC%20%EB%B0%9B%EA%B8%B0.md) : 행렬, 리스트 <br>
+[lv.2 k진수에서 소수 개수 구하기](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.2/2022KAKAO_%20k%EC%A7%84%EC%88%98%EC%97%90%EC%84%9C%20%EC%86%8C%EC%88%98%20%EA%B0%9C%EC%88%98%20%EA%B5%AC%ED%95%98%EA%B8%B0.md) <br>
+[lv.2 주차 요금 계산](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.2/2022KAKAO_%EC%A3%BC%EC%B0%A8%20%EC%9A%94%EA%B8%88%20%EA%B3%84%EC%82%B0.md): treeMap
