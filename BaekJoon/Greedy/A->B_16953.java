@@ -8,11 +8,11 @@ public class Main {
         long a = Long.parseLong(st.nextToken());
         long b = Long.parseLong(st.nextToken());
         int cnt = 1;
-        while(a != b){
-            if(b == 0){
+        while(a != b){ 
+            if(b == 0){ // 1/10 = 0 없으면 무한루프
                 cnt = -1;
                 break;
-            };
+            }
             if(b % 2 == 0){
                 b /= 2;
             }else if(b % 10 == 1){
