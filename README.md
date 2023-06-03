@@ -1,5 +1,25 @@
 # Practicing Data Structures & Algorithms
 
+### 2018 KAKAO BLIND RECRUITMENT
+[lv.1 비밀지도](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84.md) : Integer.toBinaryString(), replaceAll() <br>
+[lv.1 다트게임](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EB%8B%A4%ED%8A%B8%20%EA%B2%8C%EC%9E%84.java)
+<br>
+[lv.2 캐시](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EC%BA%90%EC%8B%9C.java): queue <br>
+[lv.2 뉴스클러스터링](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EB%89%B4%EC%8A%A4%20%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81.md) : map 
+[해설](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/3%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EB%89%B4%EC%8A%A4%20%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81.md) <br>
+[lv.2 프렌즈4블록](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%ED%94%84%EB%A0%8C%EC%A6%884%EB%B8%94%EB%A1%9D.md) <br>
+[lv.3 셔틀버스](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4.md) : PriorityQueue 
+[해설](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/3%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4.md)
+
+
+### 2019 KAKAO BLIND RECRUITMENT
+[lv.1 실패율](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/2%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EC%8B%A4%ED%8C%A8%EC%9C%A8.md) : 정렬 <br>
+[lv.2 오픈채팅방](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/2%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.java) : <br>
+[lv.2 후보키](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/2%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%ED%9B%84%EB%B3%B4%ED%82%A4.md) : 조합 <br>
+[lv.3 길 찾기 게임](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/2%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EA%B8%B8%20%EC%B0%BE%EA%B8%B0%20%EA%B2%8C%EC%9E%84.md) : 
+트리, 순회, 정렬 <br>
+[lv.4 무지의 먹방 라이브](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/2%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EB%AC%B4%EC%A7%80%EC%9D%98%20%EB%A8%B9%EB%B0%A9%20%EB%9D%BC%EC%9D%B4%EB%B8%8C.md) : PriorityQueue, 정렬<br>
+
 
 ### 2020 KAKAO BLIND RECRUITMENT
 [lv.2 문자열 압축](https://github.com/Suyoung225/Algorithms/blob/main/programmers_lv.2/2020KAKAO_%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%95%95%EC%B6%95.md) : 문자열, 재귀 <br>
