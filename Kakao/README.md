@@ -1,7 +1,7 @@
 # KAKAO BLIND RECRUITMENT
 
-알고리즘 스터디: 2023년 5~6월
-그 외: 2023년 1~2월
+알고리즘 스터디: 2023년 5\~6월 <br>
+그 외: 2023년 1\~2월
 
 ### 2018 KAKAO BLIND RECRUITMENT
 [lv.1 비밀지도](https://github.com/LeeJaeYun7/kakao-blind-algorithm/blob/main/1%EC%A3%BC%EC%B0%A8/%EC%9C%A4%EC%88%98%EC%98%81/%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84.md) : Integer.toBinaryString(), replaceAll() <br>
