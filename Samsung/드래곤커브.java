@@ -23,7 +23,7 @@ public class Main {
 			int g = Integer.parseInt(st.nextToken());
 			drawDragonCurve(x, y, getDirections(d, g));
 		}
-		System.out.println(countCircles());
+		System.out.println(countSqaures());
 	}
 
 	static List<Integer> getDirections(int d, int g) {
@@ -49,7 +49,7 @@ public class Main {
 		}
 	}
 
-	static int countCircles() {
+	static int countSqaures() {
 		int cnt = 0;
 		for (int i = 0; i < 100; i++) {
 			for (int j = 0; j < 100; j++) {
