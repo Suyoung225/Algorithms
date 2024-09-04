@@ -35,10 +35,9 @@ public class Main {
     }
     System.out.println(sb.toString());
   }
+  
   static int priority(char operator) {
-    if (operator == '(' || operator == ')') {
-      return 0;
-    } else if (operator == '+' || operator == '-') {
+    if (operator == '+' || operator == '-') {
       return 1;
     } else if (operator == '*' || operator == '/') {
       return 2;
