@@ -24,3 +24,32 @@ class Solution {
     }
 }
 ```
+
+```java
+class Solution {
+    public long solution(int cap, int n, int[] deliveries, int[] pickups) {
+    long dist = 0;
+    for (int i = n - 1; i >= 0; ) {
+      if (deliveries[i] == 0 && pickups[i] == 0) {
+          i--;
+          continue;
+      }
+        deliver(deliveries, cap, i);
+        deliver(pickups, cap, i);
+        dist += (i + 1) * 2;
+    }
+    return dist;
+  }
+
+  void deliver(int[] arr, int cap, int idx) {
+    while (idx >= 0 && arr[idx] <= cap) {
+      cap -= arr[idx];
+      arr[idx--] = 0;
+    }
+    if (idx >= 0 && cap != 0) {
+      arr[idx] -= cap;
+    }
+  }
+
+}
+```
