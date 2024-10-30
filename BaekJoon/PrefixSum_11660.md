@@ -189,3 +189,72 @@ public class Main {
 }
 
 ```
+
+
+## 이차원 구간합
+사과나무 골드 5 <br>
+https://www.acmicpc.net/problem/20002
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+  static int N;
+  static long[][] map, prefixSum;
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st = new StringTokenizer(br.readLine());
+    N = Integer.parseInt(st.nextToken());
+    map = new long[N][N];
+    prefixSum = new long[N][N];
+    for (int i = 0; i < N; i++) {
+      st = new StringTokenizer(br.readLine());
+      for (int j = 0; j < N; j++) {
+        map[i][j] = Integer.parseInt(st.nextToken());
+      }
+    }
+    long max = map[0][0];
+    for (int i = 0; i < N; i++) {
+      for (int j = 0; j < N; j++) {
+        max = Math.max(max, map[i][j]);
+
+        prefixSum[i][j] = map[i][j];
+        if (i - 1 >= 0) {
+          prefixSum[i][j] += prefixSum[i - 1][j];
+        }
+        if (j - 1 >= 0) {
+          prefixSum[i][j] += prefixSum[i][j - 1];
+        }
+        if (i - 1 >= 0 && j - 1 >= 0) {
+          prefixSum[i][j] -= prefixSum[i - 1][j - 1];
+        }
+      }
+    }
+    // k * k
+    for (int k = 2; k <= N; k++) {
+      for (int i = 0; i <= N - k; i++) {
+        for (int j = 0; j <= N - k; j++) {
+          long sum = prefixSum[i + k - 1][j + k - 1];
+          if (i - 1 >= 0) {
+            sum -= prefixSum[i - 1][j + k - 1];
+          }
+          if (j - 1 >= 0) {
+            sum -= prefixSum[i + k - 1][j - 1];
+          }
+          if (i - 1 >= 0 && j - 1 >= 0) {
+            sum += prefixSum[i - 1][j - 1];
+          }
+          max = Math.max(max, sum);
+        }
+
+      }
+    }
+    System.out.println(max);
+  }
+
+}
+
+```
